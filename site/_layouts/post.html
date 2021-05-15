@@ -1,0 +1,12 @@
+---
+layout: default
+---
+
+<h1>Crisis Resources for <a href="#">{{ page.title }}</a></h1>
+<h3>Under the region of: {% for tag in page.tags %}<a href="/tag/{{ tag }}">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}</h3>
+{{ content }}
+<br>
+<br>
+<hr>
+
+<a href="{{site.baseurl}}/" class="h1">Go Back</a>

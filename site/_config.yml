@@ -1,0 +1,16 @@
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+title: "Crisis resources" # the name of your site, e.g. ACME Corp.
+collections:
+  pages:
+    output: true
+    permalink: /:name
+  posts:
+    output: true
+    permalink: /:year/:month/:day/:slug
+markdown: kramdown
+kramdown:
+  input: GFM
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
