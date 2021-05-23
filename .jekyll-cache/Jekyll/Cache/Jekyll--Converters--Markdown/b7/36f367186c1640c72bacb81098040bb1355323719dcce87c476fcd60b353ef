@@ -1,0 +1,44 @@
+I"<<p><img src="https://img.shields.io/badge/EMERGENCY--SERVICES-911-orange?style=plastic" width="auto" height="24em" alt="" /></p>
+
+<p>Some text here</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat asperiores laudantium eum quo vel, cum dicta nesciunt laborum ad beatae!</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>table</th>
+      <th>here</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>hello</td>
+      <td>hello</td>
+    </tr>
+  </tbody>
+</table>
+
+<details>
+  <summary>sample dropdown</summary>
+  This is a dropdown
+</details>
+
+<details>
+  <summary>Another dropdown</summary>
+  Dropdown with link
+</details>
+
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Halifax_Montage_December_2017.jpg/250px-Halifax_Montage_December_2017.jpg" class="img-fluid" alt="" /></p>
+<caption>A Responsive image</caption>
+
+<h1 id="heading-1">Heading 1</h1>
+<h2 id="heading-2">Heading 2</h2>
+<h3 id="heading-3">Heading 3</h3>
+<h4 id="heading-4">Heading 4</h4>
+<ul>
+  <li><a href="#">a link here</a></li>
+  <li><a href="#">some link</a></li>
+</ul>
+
+:ET

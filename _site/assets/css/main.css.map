@@ -1,0 +1,14 @@
+{
+	"version": 3,
+	"file": "main.css",
+	"sources": [
+		"main.scss",
+		"_sass/main.scss"
+	],
+	"sourcesContent": [
+		"@import \"main\";\n",
+		"$backgroundColor: #ffffff;\n$bodyColor: #000000;\n$bodyFont: -apple-system,BlinkMacSystemFont,\"Segoe UI\",Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\",\"Segoe UI Symbol\";\n\nbody {\n  background: $backgroundColor;\n  color: $bodyColor;\n  font-family: $bodyFont;\n  font-size: 1.8em;\n}\n\ntable tr th {background:#eeeee1; color:#333; padding:0; border:#aaa solid 1px;  text-align: center; font-weight: bold;}  \ntable tr td {border:1px #ccc solid; padding:5px;}  \ntable tr td.rightright {background: #eeeee1;}  \ntable tr td h4 {margin:0; padding:0; font-weight:normal;}  "
+	],
+	"names": [],
+	"mappings": "ACIA,AAAA,IAAI,CAAC,EACH,UAAU,EALM,OAAO,EAMvB,KAAK,EALK,OAAO,EAMjB,WAAW,EALF,aAAa,EAAC,kBAAkB,EAAC,UAAU,EAAC,SAAS,EAAC,KAAK,EAAC,UAAU,EAAC,mBAAmB,EAAC,gBAAgB,EAAC,iBAAiB,EAMtI,SAAS,EAAE,KAAK,GACjB;;AAED,AAAA,KAAK,CAAC,EAAE,CAAC,EAAE,CAAC,EAAC,UAAU,EAAC,OAAO,EAAE,KAAK,EAAC,IAAI,EAAE,OAAO,EAAC,CAAC,EAAE,MAAM,EAAC,cAAc,EAAG,UAAU,EAAE,MAAM,EAAE,WAAW,EAAE,IAAI,GAAG;;AACxH,AAAA,KAAK,CAAC,EAAE,CAAC,EAAE,CAAC,EAAC,MAAM,EAAC,cAAc,EAAE,OAAO,EAAC,GAAG,GAAG;;AAClD,AAAA,KAAK,CAAC,EAAE,CAAC,EAAE,AAAA,WAAW,CAAC,EAAC,UAAU,EAAE,OAAO,GAAG;;AAC9C,AAAA,KAAK,CAAC,EAAE,CAAC,EAAE,CAAC,EAAE,CAAC,EAAC,MAAM,EAAC,CAAC,EAAE,OAAO,EAAC,CAAC,EAAE,WAAW,EAAC,MAAM,GAAG"
+}
