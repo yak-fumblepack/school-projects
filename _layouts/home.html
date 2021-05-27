@@ -23,29 +23,56 @@ layout: default
     background-color: #f9f9f9;
 	}
 </style>
-<h1>Search</h1>
-<div id="search-container" style="width: 42em;">
-    <input type="text" id="search-input" placeholder="Search for a region, city, or town">
-    <ul style="list-style-type: none;" id="results-container"></ul>
+<div class="card">
+  <div class="container">
+		<h2 style="font-size: 2em;" class="py-2">Search Region</h2>
+		<div id="search-container" style="width: 42em;">
+		    <input  type="text" id="search-input" placeholder="Search for a region, city, or town">
+		    <ul style="list-style-type: none;" id="results-container"></ul>
+		</div>
+    <span>RSS: <a href="{{ site.baseurl }}/atom.xml" style="color:#ee802f"><span class="fa fa-rss"></span></a></span>
+  </div>
 </div>
-<span>RSS: <a href="{{ site.baseurl }}/atom.xml" style="color:#ee802f"><span class="fa fa-rss"></span></a></span>
 <br>
 <br>
-<h2>Regions</h2>
-{% assign tags = site.tags | sort %}
-<p>
-  {% for tag in tags %}
-    <a href="/tag/{{ tag | first | replace: ' ', '%20'}}">{{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }}){% unless forloop.last %}, {% endunless %}</a>
-  {% endfor %}
-</p>
-<br>
-<br>
-<h2>All regions</h2>
-<ul>
-    {% for post in site.posts %}
-      <li><a style="color: black;" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-</ul>
+<div class="row">
+  <div class="column">
+    <div class="card">
+			<h2>Regions</h2>
+			{% assign tags = site.tags | sort %}
+			<p>
+			  {% for tag in tags %}
+			    <a href="/tag/{{ tag | first | replace: ' ', '%20'}}">{{ tag[0] | replace:'-', ' ' }} ({{ tag | last | size }}){% unless forloop.last %}, {% endunless %}</a>
+			  {% endfor %}
+			</p>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+			<h2>All regions</h2>
+			<ul>
+			    {% for post in site.posts %}
+			      <li><a style="color: black;" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+			    {% endfor %}
+			</ul>
+			<script src="/search.js" type="text/javascript"></script>
+			<script type="text/javascript">
+			SimpleJekyllSearch({
+			  searchInput: document.getElementById('search-input'),
+			  resultsContainer: document.getElementById('results-container'),
+			  json: '/search.json',
+			  searchResultTemplate: '<li><a href="{url}" style="color: #000;" title="{desc}">{title}</a></li>',
+			  noResultsText: 'No results found',
+			  limit: 10,
+			  fuzzy: true,
+			  exclude: ['Welcome']
+			})
+			</script>
+    </div>
+  </div>
+
+</div>
 <script src="/search.js" type="text/javascript"></script>
 <script type="text/javascript">
 SimpleJekyllSearch({
@@ -59,3 +86,39 @@ SimpleJekyllSearch({
   exclude: ['Welcome']
 })
 </script>
+<style>
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 50%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 500px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+	margin-top: 20px;
+  text-align: left;
+  background-color: white;
+}
+</style>

@@ -2,7 +2,8 @@
 layout: default
 ---
 <h1>Region - {{page.tag}}</h1>
-  <ul>
+<div class="card" style="width: 42em;">
+  <ul class="py-3">
     {% for post in site.posts %}
       {% if post.tags contains page.tag %}
         <li>
@@ -11,8 +12,9 @@ layout: default
       {% endif %}
     {% endfor %}
   </ul>
+</div>
 <br>
 <br>
 <hr>
 
-<a href="{{site.baseurl}}/" class="h1">Go Back</a>
+<a href="{{site.baseurl}}/" class="btn btn-lg btn-light">Go Back</a>
